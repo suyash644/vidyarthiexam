@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddQuizComponent implements OnInit {
 
+  category:any = [{
+    categoryid: 23,
+    title : "Java Programing",
+  },{
+    categoryid:24,
+    title:"Math"
+  }]
+
   constructor() { }
 
   ngOnInit(): void {
