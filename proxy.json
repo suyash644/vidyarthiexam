@@ -1,0 +1,6 @@
+{
+    "/generate-token": {
+        "target": "http://localhost:8123/generate-token",
+        "secure": false
+    }
+}

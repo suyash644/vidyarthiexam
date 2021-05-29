@@ -1,0 +1,48 @@
+<mat-card *ngIf="user">
+    <h1>
+        Your Profile Details
+    </h1>
+    <div class="bootstrap-wrapper">
+        <div class="container">
+            <mat-card-header>
+            <div class="container text-center">
+                <img src="https://content-api-us2.codeavengers.com/file/cloud/assets/profile-01.png" alt=""
+                class="profile-image responsive">
+                <h1 class="mt20">{{ user.firstName }} {{ user.lastName }}</h1>
+            </div>
+        </mat-card-header>
+            <mat-card-content>
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <table class="text-center">
+                        <tr>
+                            <td>Username</td>
+                            <td>{{ user.userName }}</td>
+                        </tr>
+                        <tr>
+                            <td>Userid</td>
+                            <td>EXAM{{user.userId}}</td>
+                        </tr>
+                        <tr>
+                            <td>Phone</td>
+                            <td>{{ user.phone }}</td>
+                        </tr>
+                        <tr>
+                            <td>Role</td>
+                            <td>{{ user.authorities[0].authority }}</td>
+                        </tr>
+                        <tr>
+                            <td>STATUS</td>
+                            <td>{{ user.enabled ? 'ACTIVE':'DEACTIVE' }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions class="text-center">
+            <button mat-raised-button color="primary">UPDATE</button>
+            <button mat-raised-button color="accent">SHARE</button>
+          </mat-card-actions>
+        </div>
+    </div>  
+</mat-card>
