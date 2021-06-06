@@ -1,11 +1,11 @@
 <mat-card>
-    <h1>Add New Quiz</h1>
+    <h1>Update Quiz</h1>
         <mat-card-content>
             <div class="bootstrap-wrapper">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 offset-md-2">
-                            <form (ngSubmit)="addQuiz()">
+                            <form *ngIf="quizData" (ngSubmit)="updateQuiz()">
                                 <mat-form-field class="w100" appearance="outline">
                                     <mat-label>
                                         Enter Title
@@ -60,7 +60,7 @@
                                     </mat-select>
                                   </mat-form-field>
                                   <div class="container text-center">
-                                   <button mat-raised-button color="accent">Add Quiz</button>
+                                   <button mat-raised-button color="accent">Update Quiz</button>
                                   </div>
                             </form>
                         </div>

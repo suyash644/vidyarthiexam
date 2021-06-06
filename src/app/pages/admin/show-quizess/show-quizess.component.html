@@ -15,8 +15,9 @@
         <button mat-flat-button color="warn" class="ml20">Questions</button>
         <button mat-flat-button color="accent" class="ml20">Max marks  {{ q.maxMarks }}</button>
         <button mat-flat-button color="accent" class="ml20">Question  {{ q.numberOfQuestion }}</button>
-        <button mat-flat-button color="primary" class="ml20">UPDATE</button>
+        <button mat-flat-button color="primary" class="ml20" [routerLink]="'/admin/quiz/'+ q.quizid">UPDATE</button>
         <button mat-flat-button color="primary" class="ml20">ATTEMPTS</button>
+        <button mat-flat-button color="warn" class="ml20" (click)="deleteQuiz(q.quizid)">DELETE</button>
     </mat-card-actions>
 </mat-card>
 
