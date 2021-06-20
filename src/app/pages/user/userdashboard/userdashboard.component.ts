@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-userdashboard',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserdashboardComponent implements OnInit {
 
-  constructor() { }
+  categories:any;
+  constructor(private _cat: CategoryService, private _snack: MatSnackBar) { }
 
   ngOnInit(): void {
+    
   }
 
 }
